@@ -1,0 +1,151 @@
+/* Footer */
+.footer {
+  margin-top: 7em;
+  padding: 2em 0em;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: $footer-bg;
+
+  &__wrapper {
+    padding: 2em 7em;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__box {
+    flex-basis: 40%;
+    height: 100%;
+  }
+
+  &__logo {
+    font-size: 1.7em;
+    color: $color-white;
+    font-weight: 700;
+    margin-bottom: 1.2em;
+    font-family: $heading-family;
+  }
+
+  &__info {
+    font-size: 0.8em;
+    font-weight: 300;
+    color: $color-white;
+    line-height: 1.5em;
+    width: 80%;
+  }
+
+  &__main {
+    font-size: 1.7em;
+    color: $color-white;
+    font-weight: 700;
+    margin-bottom: 1em;
+    font-family: $heading-family;
+    text-transform: capitalize;
+  }
+
+  &__li {
+    &:not(:first-child) {
+      margin-top: 0.8em;
+    }
+  }
+
+  &__link {
+    font-size: 0.8em;
+    font-weight: 400;
+    color: $color-white;
+    transition: all 0.4s ease-in-out;
+  }
+
+  &__link:hover {
+    color: $primary;
+  }
+
+  &__contact {
+    margin-top: 2em;
+  }
+
+  &__number &:not(:first-child) {
+    margin-top: 1em;
+
+    .bx {
+      font-size: 1.6em;
+      color: $color-white;
+      margin-right: 0.6em;
+    }
+  }
+
+  &__xftre {
+    font-size: 0.8em;
+    font-weight: 300;
+    color: $color-white;
+  }
+
+  &__form {
+    width: 100%;
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__inputBox {
+    flex-basis: 80%;
+  }
+
+  &__submitBox {
+    flex-basis: 20%;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 1.6em;
+    background-color: transparent;
+    border-top: 1px solid $color-white;
+    border-bottom: 1px solid $color-white;
+    border-left: 1px solid $color-white;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-right: none;
+    outline: none;
+    color: $color-white;
+    font-weight: 300;
+    font-family: inherit;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    transition: all 0.4s ease-in-out;
+
+    &:focus {
+      border-top: 1px solid $primary;
+      border-bottom: 1px solid $primary;
+      border-left: 1px solid $primary;
+    }
+  }
+  &__btn {
+    width: 100%;
+    padding: 1.6em;
+    background-color: $primary;
+    border: none;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    color: $color-white;
+    font-weight: 600;
+    font-family: inherit;
+    font-size: 0.8em;
+    text-transform: uppercase;
+  }
+
+  &__copyRight {
+    text-align: center;
+    margin: 1em 0em 0em 0em;
+  }
+
+  &__copy {
+    font-size: 0.8em;
+    font-weight: 300;
+    color: $color-white;
+  }
+
+  &__primary {
+    color: $primary;
+    font-weight: 500;
+  }
+}

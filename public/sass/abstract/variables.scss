@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Esteban&display=swap');
+
+//Colors
+$text: #404040;
+$text-dark: #252525;
+$primary: #ed3237;
+$primary-dark: #544af4;
+$color-white: #fff;
+$line: #efefef;
+$bg: #fff;
+$bg-alt: #fdfdfd;
+$bg-line: rgba(0, 0, 0, 0.2);
+$bg-container: #f4f5ff;
+$w-bg: rgba(233, 235, 254, 0.969);
+$w-element: rgba(37, 37, 37, 0.85);
+$w-heading-color: #737272;
+$footer-bg: #252525;
+$card-bg: #f9f9f9;
+$box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+//Fonts
+$font-family: 'Montserrat', sans-serif;
+$heading-family: 'Esteban', serif;
+$radius: 4px;
+$weight-light: 300;
+$weight-normal: 400;
+$weight-semi: 600;
+$weight-bold: 700;
+$weight-extra-bold: 900;
+$container: 80%;
+$container-max: 1356px;

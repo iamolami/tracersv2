@@ -1,0 +1,714 @@
+//Hero
+.hero {
+  &__textBox {
+    text-align: center;
+  }
+
+  &__imgBox {
+    text-align: center;
+    margin-top: 3em;
+
+    @include for_breakpoint(sm-resolution) {
+      margin-top: 2em;
+      padding: 0em 2em;
+    }
+
+    @include for_breakpoint(xxl-resolution) {
+      margin-top: 2em;
+      padding: 0em 2em;
+    }
+  }
+
+  &__heading {
+    font-size: 2em;
+    font-weight: 900;
+    font-family: $heading-family;
+    color: $text-dark;
+    text-transform: uppercase;
+    word-spacing: 0.3em;
+
+    @include for_breakpoint(sm-resolution) {
+      font-size: 1.2em;
+    }
+
+    @include for_breakpoint(sm-resolution) {
+      font-size: 1.2em;
+    }
+  }
+
+  &__description {
+    font-size: 0.8em;
+    color: $text;
+    font-weight: 300;
+    margin-top: 0.5em;
+  }
+
+  &__image {
+    width: 45%;
+
+    @include for_breakpoint(sm-resolution) {
+      width: 100%;
+    }
+
+    @include for_breakpoint(xxl-resolution) {
+      width: 100%;
+    }
+  }
+}
+
+//About
+.about {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin-top: -2em;
+  padding: 0rem 7em;
+
+  @include for_breakpoint(sm-resolution) {
+    padding: 0em 2em;
+  }
+
+  @include for_breakpoint(xxl-resolution) {
+    padding: 0em 2em;
+  }
+
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 2em 0em;
+
+    @include for_breakpoint(sm-resolution) {
+      flex-direction: column;
+    }
+
+    @include for_breakpoint(xxl-resolution) {
+      flex-direction: column;
+    }
+  }
+  &__box {
+    flex: 1;
+    position: relative;
+
+    &:not(:first-child) {
+      margin-left: 1.2em;
+
+      @include for_breakpoint(sm-resolution) {
+        margin-top: 2em;
+      }
+
+      @include for_breakpoint(xxl-resolution) {
+        margin-top: 2em;
+      }
+    }
+  }
+
+  &__textBox {
+    padding-left: 1.5em;
+  }
+
+  &__heading {
+    font-size: 0.8em;
+    font-weight: 700;
+    color: $w-heading-color;
+    text-transform: uppercase;
+
+    @include for_breakpoint(sm-resolution) {
+      font-size: 0.7em;
+    }
+
+    @include for_breakpoint(xxl-resolution) {
+      font-size: 0.7em;
+    }
+  }
+
+  &__main {
+    font-size: 2em;
+    line-height: 1.5em;
+    margin: 1.4em 0em;
+    color: $text-dark;
+    font-family: $heading-family;
+
+    @include for_breakpoint(sm-resolution) {
+      font-size: 1.6em;
+    }
+  }
+
+  &__description {
+    font-size: 0.8em;
+    color: $text;
+    line-height: 2em;
+    border-left: 3px solid $bg-line;
+    padding-left: 1.5em;
+  }
+
+  &__link {
+    font-size: 0.9rem;
+    color: $primary;
+    font-weight: 400;
+    font-family: $heading-family;
+  }
+
+  &__circle-01,
+  &__circle-02,
+  &__circle-03 {
+    position: absolute;
+  }
+
+  &__circle-01 {
+    right: 0%;
+    top: 60%;
+    transform: translateY(-60%);
+    width: 40%;
+
+    @include for_breakpoint(sm-resolution) {
+      right: 0%;
+    top: 100%;
+    transform: translateY(0);
+    width: 45%;
+    }
+
+    @include for_breakpoint(xxl-resolution) {
+      right: 0%;
+    top: 100%;
+    transform: translateY(0);
+    width: 45%;
+    }
+  }
+
+  &__circle-02 {
+    top: 20%;
+    left: 35%;
+    width: 15%;
+
+    @include for_breakpoint(sm-resolution) {
+      bottom: 0%;
+    left: 10%;
+    width: 15%;
+    }
+
+    @include for_breakpoint(xxl-resolution) {
+      bottom: 0%;
+    left: 10%;
+    width: 15%;
+    }
+  }
+
+  &__circle-03 {
+    bottom: 5%;
+    left: 57%;
+    width: 12%;
+
+    @include for_breakpoint(sm-resolution) {
+      bottom: 0%;
+    left: 57%;
+    width: 12%;
+    }
+
+    @include for_breakpoint(xxl-resolution) {
+      bottom: 0%;
+    left: 57%;
+    width: 12%;
+    }
+  }
+}
+
+/* Features */
+.features {
+  width: 100%;
+  height: 100%;
+  margin-top: 7em;
+  padding: 7em 7em;
+  clip-path: polygon(0 14%, 100% 0%, 100% 75%, 0% 100%);
+  background-image: linear-gradient(180deg, $w-bg, $w-bg), url(/assets/bg-2.jpg);
+  background-position: 0 50%, 50% 50%;
+  background-size: auto, cover;
+  background-repeat: repeat, no-repeat;
+  background-attachment: scroll, fixed;
+
+  @include for_breakpoint(sm-resolution) {
+    padding: 7rem 2rem 6rem 2rem;
+    margin-bottom: 4rem;
+    clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+  }
+
+  @include for_breakpoint(xxl-resolution) {
+    padding: 7rem 2rem 6rem 2rem;
+    margin-bottom: 4rem;
+    clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+  }
+
+
+  &__heading {
+    font-size: 0.8em;
+    font-weight: 700;
+    color: $w-heading-color;
+    text-transform: uppercase;
+
+    @include for_breakpoint(sm-resolution) {
+      font-size: 0.7em;
+    }
+
+    @include for_breakpoint(xxl-resolution) {
+      font-size: 0.7em;
+    }
+  }
+
+  &__info {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: $text-dark;
+    font-family: $heading-family;
+
+    @include for_breakpoint(sm-resolution) {
+      font-size: 1.6em;
+    }
+
+    @include for_breakpoint(xxl-resolution) {
+      font-size: 1.6em;
+    }
+  }
+
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 4em 0em;
+    flex-direction: row;
+
+    @include for_breakpoint(sm-resolution) {
+      margin: 4rem 0rem;
+    flex-direction: column;
+    }
+
+    @include for_breakpoint(xxl-resolution) {
+      margin: 4rem 0rem;
+    flex-direction: column;
+    }
+    
+  }
+
+  &__box {
+    flex: 1;
+    height: 100%;
+    margin: 0em 0.8em;
+    text-align: center;
+    padding: 1.2em;
+  }
+
+  &__img {
+    width: 50%;
+  }
+
+  &__main {
+    font-size: 1.2em;
+    line-height: 1.75em;
+    font-weight: 700;
+    color: $text-dark;
+    text-transform: capitalize;
+    margin-top: 1em;
+    font-family: $heading-family;
+  }
+
+  &__description {
+    font-size: 0.8em;
+    color: $text;
+    line-height: 1.5em;
+    margin-top: 1em;
+  }
+}
+
+.general__line {
+  width: 20%;
+  height: 1px;
+  background-color: $primary;
+  margin: 0.8rem auto;
+}
+
+//Service
+.service {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin-top: 3em;
+  padding: 0rem 7em;
+
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 2em 0em;
+  }
+
+  &__box {
+    flex: 1;
+    position: relative;
+
+    &:first-child {
+      padding-right: 1.7em;
+    }
+  }
+
+  &__textBox {
+    padding-left: 1.5em;
+  }
+
+  &__heading {
+    font-size: 0.8em;
+    font-weight: 700;
+    color: $w-heading-color;
+    text-transform: uppercase;
+  }
+
+  &__main {
+    font-size: 2em;
+    line-height: 1.5em;
+    margin: 1.4em 0em;
+    color: $text-dark;
+    font-family: $heading-family;
+  }
+
+  &__description {
+    font-size: 0.8em;
+    color: $text;
+    line-height: 2em;
+    border-left: 3px solid $bg-line;
+    padding-left: 1.5em;
+  }
+
+  &__link {
+    font-size: 0.9rem;
+    color: $primary;
+    font-weight: 400;
+    font-family: $heading-family;
+  }
+
+  img {
+    position: absolute;
+  }
+
+  &__image-01 {
+    width: 52%;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__image-02 {
+    width: 42%;
+    top: 5%;
+    right: 10%;
+  }
+
+  &__image-03 {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    bottom: 0%;
+    left: 10%;
+  }
+
+  &__image-04 {
+    width: 15%;
+  }
+}
+
+/* Patron */
+.patron {
+  margin-top: 5em;
+  padding: 0rem 7em;
+  overflow-x: hidden;
+
+  &__box {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-bottom: 2em;
+
+    &:not(:first-child) {
+      margin-top: 1.5em;
+    }
+  }
+
+  &__roundImage {
+    width: 350px;
+    height: 350px;
+    // background-color: rgba(233, 235, 254, 0.97);
+    border-radius: 50%;
+    margin: 1em auto;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  &__info {
+    margin-top: 1em;
+  }
+
+  &__name {
+    font-size: 1.2em;
+    color: $text-dark;
+    font-weight: 700;
+    font-family: $heading-family;
+    margin-bottom: 0.5em;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    color: $text;
+    font-weight: 500;
+    font-size: 1em;
+  }
+}
+
+/* Swipes */
+.swiper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin-top: 5rem;
+  background-image: linear-gradient(180deg, $w-bg, $w-bg), url(/assets/bg-2.jpg);
+  background-position: 0 50%, 50% 50%;
+  background-size: auto, cover;
+  background-repeat: repeat, no-repeat;
+  background-attachment: scroll, fixed;
+  padding: 0rem 10em;
+  clip-path: polygon(0 0, 100% 0, 100% 72%, 0 100%);
+
+  &-slide {
+    text-align: center;
+    margin-bottom: 3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  &__box {
+    position: relative;
+    width: 50%;
+    height: 50vh;
+  }
+
+  &__header {
+    margin-bottom: 3em;
+    margin-top: 4em;
+  }
+
+  &__heading {
+    font-size: 1.7em;
+    font-weight: 700;
+    color: $text-dark;
+    font-family: $heading-family;
+  }
+
+  &__info {
+    font-size: 0.8em;
+    color: $text;
+    line-height: 2em;
+    margin-top: 1.5em;
+  }
+
+  &-pagination {
+    margin-bottom: 2em;
+
+    span {
+      background-color: $primary;
+    }
+  }
+}
+
+/* Partners */
+.partners {
+  margin-top: 4em;
+  padding: 0rem 7em;
+  text-align: center;
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__heading {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 1.5em;
+    color: $text-dark;
+    font-family: $heading-family;
+  }
+
+  &__info {
+    font-size: 0.8em;
+    color: $text;
+    font-family: $heading-family;
+    font-weight: 500;
+    font-style: italic;
+    width: 60%;
+    margin: 0rem auto;
+    padding-top: 1.8em;
+    line-height: 1.8em;
+  }
+
+  &__w-cola {
+    margin-top: 4em;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  &__w-pat {
+    flex: 1;
+    height: 100%;
+
+    &:not(:first-child) {
+      margin-left: 1em;
+    }
+
+    img {
+      width: 90%;
+    }
+  }
+}
+
+.w-form {
+
+  &__hero {
+    width: 100%;
+    height: 55vh;
+    background-image: linear-gradient(180deg, $w-element, $w-element),
+      url(/assets/member__img.jpg);
+    background-position: 50% 50%, 50% 50%;
+    background-size: auto, cover;
+    background-repeat: repeat, no-repeat;
+    background-attachment: scroll, fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__heading {
+    font-size: 2em;
+    font-weight: 700;
+    color: $color-white;
+    font-family: $heading-family;
+  }
+
+  &__container {
+    width: 100%;
+    padding: 4em 7em;
+    background-color: $w-bg;
+    position: relative;
+  }
+
+  &__main {
+    font-size: .9em;
+    font-weight: 400;
+    text-align: center;
+    color: $text-dark;
+    font-style: italic;
+  }
+
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: $color-white;
+    padding: 2em;
+    margin-top: 1.5em;
+    box-shadow: $box-shadow;
+  }
+
+  &__element {
+    text-align: center;
+
+  .line {
+      width: 20%;
+      height: 1px;
+      background-color: $bg-line;
+      display: inline-block;
+    }
+
+    .text {
+      margin: 0em .7em;
+      font-size: 0.7em;
+      color: $w-heading-color;
+      text-transform: uppercase;
+    }
+  }
+
+  &__formBox {
+    margin-top: 1.5em;
+    text-align: center;
+  }
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    text-align: left;
+
+    &:not(:first-child) {
+      margin-top: 3em;
+    }
+  }
+
+  &__box {
+    flex: 1;
+    height: 100%;
+
+    &:not(:first-child) {
+      margin-left: 2.2em;
+    }
+  }
+
+  &__label {
+    display: block;
+    font-size: 0.7em;
+    color: $text;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &__required {
+    background-color: $w-bg;
+    padding: .5em;
+    font-size: .8em;
+    margin-left: .6em;
+    text-transform: uppercase;
+  }
+
+  &__input {
+    width: 100%;
+    padding: .9em;
+    border: 1px solid $bg-line;
+    border-radius: 5px;
+    font-family: inherit;
+    font-weight: 300;
+    font-size: .7em;
+    color: $text;
+    outline: none;
+    margin-top: 2em;
+    transition: all .4s ease-in-out;
+
+    &:focus {
+      border: 1px solid $primary;
+    }
+  }
+}

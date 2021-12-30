@@ -1,0 +1,28 @@
+{
+  "name": "tracers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm",
+    "start": "nodemon server.js",
+    "sass": "sass --watch public/sass/main.scss:public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamolami/tracersv2.git"
+  },
+  "author": "Integer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iamolami/tracersv2/issues"
+  },
+  "homepage": "https://github.com/iamolami/tracersv2#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.4",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15"
+  }
+}

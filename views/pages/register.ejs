@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs') %> 
+<body>
+    <%- include('../partials/header.ejs') %>
+    <section class="w-form">
+        <div class="w-form__hero"><h2 class="w-form__heading">Member Application</h2></div>
+    <div class="w-form__container">
+        <div class="w-form__main">Kindly enter the information on the form below to process your membership</div>
+        <div class="w-form__wrapper">
+            <div class="w-form__element">
+                <span class="line"></span>
+                <span class="text">Account Details</span>
+                <span class="line"></span>
+            </div>
+
+            <form action="#" method="post" class="w-form__formBox">
+                <div class="w-form__flex">
+                    <div class="w-form__box">
+                        <label for="fullName" class="w-form__label">Full Name <span class="w-form__required">Required</span></label>
+                        <input type="text" name="fullname" id="fullName" class="w-form__input" required>
+                    </div>
+                    <div class="w-form__box">
+                        <label for="email" class="w-form__label">Email Address <span class="w-form__required">Required</span></label>
+                        <input type="email" name="email" id="email" class="w-form__input" required>
+                    </div>
+                </div>
+
+                <div class="w-form__flex">
+                    <div class="w-form__box">
+                        <label for="contactNumber" class="w-form__label">Contact Number <span class="w-form__required">Required</span></label>
+                        <input type="tel" name="contactNumber" id="contactNumber" class="w-form__input" required>
+                    </div>
+                    <div class="w-form__box">
+                        <label for="country" class="w-form__label">Country of residence <span class="w-form__required">Required</span></label>
+                        <input type="text" name="country" id="country" class="w-form__input" required>
+                    </div>
+                </div>
+
+                <div class="w-form__flex">
+                    <div class="w-form__box">
+                        <label for="occupation" class="w-form__label">Occupation <span class="w-form__required">Required</span></label>
+                        <input type="text" name="occupation" id="occupation" class="w-form__input" required>
+                    </div>
+                    <div class="w-form__box">
+                        <label for="organization" class="w-form__label">organization </label>
+                        <input type="text" name="organization" id="organization" class="w-form__input" required>
+                    </div>
+                </div>
+
+                <div class="w-form__flex">
+                    <div class="w-form__box">
+                        <label for="qualification" class="w-form__label">Attached CV qualification <span class="w-form__required">Required</span></label>
+                        <input type="file" name="qualification" id="qualification" class="w-form__input" required>
+                    </div>
+                    <div class="w-form__box">
+                        <label for="avatat" class="w-form__label">Attached photograph <span class="w-form__required">Required</span></label>
+                        <input type="file" name="avatar" id="avatar" class="w-form__input" required>
+                    </div>
+                </div>
+                <button type="submit" class="w-form__btn">Submit Application</button>
+            </form>
+        </div>
+    </div>
+</section>
+<%- include('../partials/footer.ejs') %> 
+</body>
+</html>
