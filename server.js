@@ -1,22 +1,21 @@
 const express = require('express');
 const path = require('path');
-
+const connectDB = require('./config/db');
+const morgan = require('morgan')
 const app = express();
+app.use(express.urlencoded({ extended: true }))
+
+//Database Connection
+connectDB();
+
+app.use(morgan('dev'))
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 
-app.get('/', (req, res) => {
-    res.render('pages/index', { title: 'Home' })
-});
-
-app.get('/aboutUs', (req, res) => {
-    res.render('pages/aboutUs', { title: 'About Us' })
-})
-
-app.get('/register', (req, res) => {
-    res.render('pages/register', { title: 'Become a Member' })
-})
+//Routes
+app.use(require('./routes/pagesRoute'));
+app.use(require('./routes/authRoute'));
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

@@ -1,58 +1,93 @@
 //Hero
 .hero {
-  &__textBox {
-    text-align: center;
+  position: relative;
+  &__absolute {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    margin: 0em 0em 2em 0em;
+    background-image: url(/assets/bg-1.jpeg);
+    background-size: cover;
+    background-position: bottom;
   }
 
-  &__imgBox {
-    text-align: center;
-    margin-top: 3em;
+  &__bg-1 {
+    background-image: url(/assets/bg-1.jpeg);
+  }
+
+  &__bg-2 {
+    background-image: url(/assets/bg-2.jpeg);
+  }
+
+  &__bg-3 {
+    background-image: url(/assets/bg-3.jpeg);
+  }
+
+  &__textBox {
+    width: 30%;
+    position: absolute;
+    bottom: 10%;
+    right: 3%;
+    text-align: left;
 
     @include for_breakpoint(sm-resolution) {
-      margin-top: 2em;
-      padding: 0em 2em;
+      width: 100%;
+      right: 0%;
+      bottom: 0%;
     }
 
     @include for_breakpoint(xxl-resolution) {
-      margin-top: 2em;
-      padding: 0em 2em;
+      width: 100%;
+      right: 0%;
+      bottom: 0%;
     }
   }
 
   &__heading {
-    font-size: 2em;
+    font-size: 1.9em;
     font-weight: 900;
     font-family: $heading-family;
-    color: $text-dark;
+    color: $color-white;
+    background-color: rgba($color: $text-dark, $alpha: 0.95);
     text-transform: uppercase;
-    word-spacing: 0.3em;
+    word-spacing: 0.2em;
+    padding: 0.2em;
+    animation: 2s slideRight;
 
     @include for_breakpoint(sm-resolution) {
-      font-size: 1.2em;
+      font-size: 1.5em;
     }
 
-    @include for_breakpoint(sm-resolution) {
-      font-size: 1.2em;
+    @include for_breakpoint(xxl-resolution) {
+      font-size: 1.5em;
     }
   }
 
   &__description {
-    font-size: 0.8em;
-    color: $text;
-    font-weight: 300;
+    font-size: 0.9em;
+    color: $color-white;
+    font-weight: 500;
     margin-top: 0.5em;
-  }
-
-  &__image {
-    width: 45%;
+    background-color: rgba($color: $primary, $alpha: 0.55);
+    padding: 1em;
+    line-height: 1.5em;
+    animation: 2s slideBottom;
 
     @include for_breakpoint(sm-resolution) {
-      width: 100%;
+      font-size: 0.8em;
+      margin-top: 0em;
     }
 
     @include for_breakpoint(xxl-resolution) {
-      width: 100%;
+      font-size: 0.8em;
+      margin-top: 0em;
     }
+  }
+
+  &__pagination {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
   }
 }
 
@@ -61,15 +96,16 @@
   width: 100%;
   height: 100%;
   position: relative;
-  margin-top: -2em;
-  padding: 0rem 7em;
+  padding: 0em 7em;
 
   @include for_breakpoint(sm-resolution) {
     padding: 0em 2em;
+    margin-top: -3rem;
   }
 
   @include for_breakpoint(xxl-resolution) {
     padding: 0em 2em;
+    margin-top: -3rem;
   }
 
   &__wrapper {
@@ -114,15 +150,7 @@
     font-size: 0.8em;
     font-weight: 700;
     color: $w-heading-color;
-    text-transform: uppercase;
-
-    @include for_breakpoint(sm-resolution) {
-      font-size: 0.7em;
-    }
-
-    @include for_breakpoint(xxl-resolution) {
-      font-size: 0.7em;
-    }
+    text-transform: uppercase
   }
 
   &__main {
@@ -146,7 +174,7 @@
   }
 
   &__link {
-    font-size: 0.9rem;
+    font-size: 0.9em;
     color: $primary;
     font-weight: 400;
     font-family: $heading-family;
@@ -166,16 +194,16 @@
 
     @include for_breakpoint(sm-resolution) {
       right: 0%;
-    top: 100%;
-    transform: translateY(0);
-    width: 45%;
+      top: 100%;
+      transform: translateY(0);
+      width: 45%;
     }
 
     @include for_breakpoint(xxl-resolution) {
       right: 0%;
-    top: 100%;
-    transform: translateY(0);
-    width: 45%;
+      top: 100%;
+      transform: translateY(0);
+      width: 45%;
     }
   }
 
@@ -186,14 +214,14 @@
 
     @include for_breakpoint(sm-resolution) {
       bottom: 0%;
-    left: 10%;
-    width: 15%;
+      left: 10%;
+      width: 15%;
     }
 
     @include for_breakpoint(xxl-resolution) {
       bottom: 0%;
-    left: 10%;
-    width: 15%;
+      left: 10%;
+      width: 15%;
     }
   }
 
@@ -204,14 +232,14 @@
 
     @include for_breakpoint(sm-resolution) {
       bottom: 0%;
-    left: 57%;
-    width: 12%;
+      left: 57%;
+      width: 12%;
     }
 
     @include for_breakpoint(xxl-resolution) {
       bottom: 0%;
-    left: 57%;
-    width: 12%;
+      left: 57%;
+      width: 12%;
     }
   }
 }
@@ -220,7 +248,7 @@
 .features {
   width: 100%;
   height: 100%;
-  margin-top: 7em;
+  margin-top: 2em;
   padding: 7em 7em;
   clip-path: polygon(0 14%, 100% 0%, 100% 75%, 0% 100%);
   background-image: linear-gradient(180deg, $w-bg, $w-bg), url(/assets/bg-2.jpg);
@@ -230,17 +258,18 @@
   background-attachment: scroll, fixed;
 
   @include for_breakpoint(sm-resolution) {
-    padding: 7rem 2rem 6rem 2rem;
-    margin-bottom: 4rem;
+    padding: 7em 2em 6em 2em;
+    margin-bottom: 4em;
     clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+    margin-top: 8em;
   }
 
   @include for_breakpoint(xxl-resolution) {
-    padding: 7rem 2rem 6rem 2rem;
-    margin-bottom: 4rem;
+    padding: 7em 2em 6em 2em;
+    margin-bottom: 4em;
     clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+    margin-top: 8em;
   }
-
 
   &__heading {
     font-size: 0.8em;
@@ -281,15 +310,14 @@
     flex-direction: row;
 
     @include for_breakpoint(sm-resolution) {
-      margin: 4rem 0rem;
-    flex-direction: column;
+      margin: 4em 0em;
+      flex-direction: column;
     }
 
     @include for_breakpoint(xxl-resolution) {
-      margin: 4rem 0rem;
-    flex-direction: column;
+      margin: 4em 0em;
+      flex-direction: column;
     }
-    
   }
 
   &__box {
@@ -297,7 +325,6 @@
     height: 100%;
     margin: 0em 0.8em;
     text-align: center;
-    padding: 1.2em;
   }
 
   &__img {
@@ -326,7 +353,7 @@
   width: 20%;
   height: 1px;
   background-color: $primary;
-  margin: 0.8rem auto;
+  margin: 0.8em auto;
 }
 
 //Service
@@ -335,7 +362,17 @@
   height: 100%;
   position: relative;
   margin-top: 3em;
-  padding: 0rem 7em;
+  padding: 0em 7em;
+
+  @include for_breakpoint(sm-resolution) {
+    padding: 0em 2em;
+    margin-top: -3rem;
+  }
+
+  @include for_breakpoint(xxl-resolution) {
+    padding: 0em 2em;
+    margin-top: -3rem;
+  }
 
   &__wrapper {
     width: 100%;
@@ -345,6 +382,14 @@
     justify-content: space-between;
     flex-direction: row;
     padding: 2em 0em;
+
+    @include for_breakpoint(sm-resolution) {
+      flex-direction: column;
+    }
+
+    @include for_breakpoint(xxl-resolution) {
+      flex-direction: column;
+    }
   }
 
   &__box {
@@ -353,11 +398,29 @@
 
     &:first-child {
       padding-right: 1.7em;
+
+      @include for_breakpoint(sm-resolution) {
+        padding-right: 0em;
+        margin:10rem 0rem;
+      }
+
+      @include for_breakpoint(xxl-resolution) {
+        padding-right: 0em;
+        margin:10rem 0rem;
+      }
     }
   }
 
   &__textBox {
     padding-left: 1.5em;
+
+    @include for_breakpoint(sm-resolution) {
+      padding-left: 0em;
+    }
+
+    @include for_breakpoint(xxl-resolution) {
+      padding-left: 0em;
+    }
   }
 
   &__heading {
@@ -373,6 +436,10 @@
     margin: 1.4em 0em;
     color: $text-dark;
     font-family: $heading-family;
+
+    @include for_breakpoint(sm-resolution) {
+      font-size: 1.6em;
+    }
   }
 
   &__description {
@@ -384,7 +451,7 @@
   }
 
   &__link {
-    font-size: 0.9rem;
+    font-size: 0.9em;
     color: $primary;
     font-weight: 400;
     font-family: $heading-family;
@@ -424,7 +491,7 @@
 /* Patron */
 .patron {
   margin-top: 5em;
-  padding: 0rem 7em;
+  padding: 0em 7em;
   overflow-x: hidden;
 
   &__box {
@@ -477,13 +544,13 @@
   width: 100%;
   height: 100%;
   position: relative;
-  margin-top: 5rem;
+  margin-top: 2em;
   background-image: linear-gradient(180deg, $w-bg, $w-bg), url(/assets/bg-2.jpg);
   background-position: 0 50%, 50% 50%;
   background-size: auto, cover;
   background-repeat: repeat, no-repeat;
   background-attachment: scroll, fixed;
-  padding: 0rem 10em;
+  padding: 0em 10em;
   clip-path: polygon(0 0, 100% 0, 100% 72%, 0 100%);
 
   &-slide {
@@ -506,7 +573,18 @@
   &__box {
     position: relative;
     width: 50%;
-    height: 50vh;
+    height: 100%;
+    padding-bottom: 5em;
+
+     @include for_breakpoint(sm-resolution) {
+      width: 95%;
+      padding-bottom: 8em;
+    }
+
+    @include for_breakpoint(xxl-resolution) {
+      width: 95%;
+      padding-bottom: 8em;
+    }
   }
 
   &__header {
@@ -522,7 +600,7 @@
   }
 
   &__info {
-    font-size: 0.8em;
+    font-size: 0.9em;
     color: $text;
     line-height: 2em;
     margin-top: 1.5em;
@@ -540,7 +618,7 @@
 /* Partners */
 .partners {
   margin-top: 4em;
-  padding: 0rem 7em;
+  padding: 0em 7em;
   text-align: center;
 
   &__wrapper {
@@ -562,7 +640,7 @@
     font-weight: 500;
     font-style: italic;
     width: 60%;
-    margin: 0rem auto;
+    margin: 0em auto;
     padding-top: 1.8em;
     line-height: 1.8em;
   }
@@ -589,7 +667,6 @@
 }
 
 .w-form {
-
   &__hero {
     width: 100%;
     height: 55vh;
@@ -616,10 +693,18 @@
     padding: 4em 7em;
     background-color: $w-bg;
     position: relative;
+
+    @include for_breakpoint(sm-resolution) {
+    padding: 4em 2em;
+  }
+
+  @include for_breakpoint(xxl-resolution) {
+    padding: 4em 2em;
+  }
   }
 
   &__main {
-    font-size: .9em;
+    font-size: 0.9em;
     font-weight: 400;
     text-align: center;
     color: $text-dark;
@@ -638,7 +723,7 @@
   &__element {
     text-align: center;
 
-  .line {
+    .line {
       width: 20%;
       height: 1px;
       background-color: $bg-line;
@@ -646,7 +731,7 @@
     }
 
     .text {
-      margin: 0em .7em;
+      margin: 0em 0.7em;
       font-size: 0.7em;
       color: $w-heading-color;
       text-transform: uppercase;
@@ -664,8 +749,17 @@
     flex-direction: row;
     text-align: left;
 
+    @include for_breakpoint(sm-resolution) {
+      flex-direction: column;
+    }
+  
+    @include for_breakpoint(xxl-resolution) {
+      flex-direction: column;
+    }
+
     &:not(:first-child) {
       margin-top: 3em;
+
     }
   }
 
@@ -675,6 +769,16 @@
 
     &:not(:first-child) {
       margin-left: 2.2em;
+
+      @include for_breakpoint(sm-resolution) {
+        margin-top: 1.5rem;
+        margin-left: 0em;
+      }
+    
+      @include for_breakpoint(xxl-resolution) {
+        margin-top: 1.5rem;
+        margin-left: 0em;
+      }
     }
   }
 
@@ -688,27 +792,185 @@
 
   &__required {
     background-color: $w-bg;
-    padding: .5em;
-    font-size: .8em;
-    margin-left: .6em;
+    padding: 0.5em;
+    font-size: 0.8em;
+    margin-left: 0.6em;
     text-transform: uppercase;
   }
 
   &__input {
     width: 100%;
-    padding: .9em;
+    padding: 0.9em;
     border: 1px solid $bg-line;
     border-radius: 5px;
     font-family: inherit;
     font-weight: 300;
-    font-size: .7em;
+    font-size: 0.7em;
     color: $text;
     outline: none;
     margin-top: 2em;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 
     &:focus {
       border: 1px solid $primary;
+    }
+  }
+}
+
+// ================== Team ===============================
+.team {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0em 7em;
+  margin-top: 3em;
+  flex-direction: row;
+
+  @include for_breakpoint(sm-resolution) {
+    padding: 0em 2em;
+    flex-direction: column;
+  }
+
+  @include for_breakpoint(xxl-resolution) {
+    padding: 0em 2em;
+    flex-direction: column;
+  }
+
+  &__wrapper {
+    flex: 1;
+    height: 100%;
+    text-align: center;
+    border: 1px solid rgba($color: $text-dark, $alpha: 0.5);
+    border-radius: 10px;
+    padding: 2em 0em;
+
+    &:not(:first-child) {
+      margin-left: 2em;
+
+      @include for_breakpoint(sm-resolution) {
+        margin-left: 0em;
+        margin-top: 1.2em;
+      }
+    
+      @include for_breakpoint(xxl-resolution) {
+        margin-left: 0em;
+        margin-top: 1.2em;
+      }
+    }
+  }
+
+  &__img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: -3rem;
+  }
+
+  &__i {
+    width: 49%;
+
+    @include for_breakpoint(sm-resolution) {
+      margin-top: -1rem;
+    }
+  
+    @include for_breakpoint(xxl-resolution) {
+      margin-top: -1rem;
+    }
+    
+  }
+
+  &__details {
+    margin-top: 1.5em;
+    padding: 0em 1em;
+  }
+
+  &__name {
+    font-size: 1.7em;
+    font-weight: 700;
+    font-family: $heading-family;
+    color: $text-dark;
+  }
+
+  &__position {
+    font-size: 1em;
+    font-weight: 400;
+    margin: 1em 0em;
+  }
+
+  &__bio {
+    font-size: 0.8em;
+    font-weight: 300;
+  }
+}
+
+.team__hero {
+  width: 100%;
+  height: 55vh;
+  background-image: linear-gradient(180deg, $w-element, $w-element),
+    url(/assets/team.jpeg);
+  background-position: 50% 50%, 50% 50%;
+  background-size: auto, cover;
+  background-repeat: repeat, no-repeat;
+  background-attachment: scroll, fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 5000;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.5);
+
+  &__box {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 65%;
+    height: 50%;
+    max-width: 60rem;
+    max-height: 33rem;
+    overflow: hidden;
+    border-radius: 2px;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 19px 3px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0px 0px 19px 3px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 0px 19px 3px rgba(0, 0, 0, 0.08);
+  }
+
+  &__close {
+    color: #aaa;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0 1rem;
+    border-radius: 2px;
+    transition: 0.4s ease-out;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    &:hover,
+    &:focus {
+      color: #111;
+      text-decoration: none;
+      cursor: pointer;
     }
   }
 }

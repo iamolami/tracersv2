@@ -27,6 +27,17 @@
   margin-top: 5em;
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
+
+  @include for_breakpoint(sm-resolution) {
+    padding: 0em 2em;
+    flex-direction: column;
+  }
+
+  @include for_breakpoint(xxl-resolution) {
+    padding: 0em 2em;
+    flex-direction: column;
+  }
 
   &__box {
     position: relative;
@@ -35,6 +46,16 @@
 
     &:not(:first-child) {
       margin-left: 2em;
+
+      @include for_breakpoint(sm-resolution) {
+        margin-left: 0em;
+        margin-top: 2rem;
+      }
+    
+      @include for_breakpoint(xxl-resolution) {
+        margin-left: 0em;
+        margin-top: 2rem;
+      }
     }
   }
 
@@ -62,6 +83,14 @@
     margin: 0.5em 0em;
     color: $text-dark;
     font-family: $heading-family;
+
+    @include for_breakpoint(sm-resolution) {
+      font-size: 1.7em;
+    }
+  
+    @include for_breakpoint(xxl-resolution) {
+      font-size: 1.7em;
+    }
   }
 
   &__info {
@@ -76,6 +105,14 @@
     line-height: 2em;
     font-weight: 500;
     margin-top: 2.5em;
+
+    @include for_breakpoint(sm-resolution) {
+      margin-top: 0em;
+    }
+  
+    @include for_breakpoint(xxl-resolution) {
+      margin-top: 0em;
+    }
   }
 
   &__wrapper {
@@ -89,13 +126,28 @@
 
   &__img {
     width: 50%;
+
+    @include for_breakpoint(sm-resolution) {
+      width: 80%;
+    }
+  
+    @include for_breakpoint(xxl-resolution) {
+      width: 80%;
+    }
   }
 
   &__afri {
     font-size: 1em;
     color: $text;
     font-weight: 600;
-    font-style: italic;
+    
+    @include for_breakpoint(sm-resolution) {
+      font-size: 1.3em;
+    }
+  
+    @include for_breakpoint(xxl-resolution) {
+      font-size: 1.3em;
+    }
   }
 }
 
@@ -181,6 +233,14 @@
   padding: 0em 7rem;
   margin-top: 4em;
 
+  @include for_breakpoint(sm-resolution) {
+    padding: 0em 2em;
+  }
+
+  @include for_breakpoint(xxl-resolution) {
+    padding: 0em 2em;
+  }
+
   &__wrapper {
     display: flex;
     justify-content: center;
@@ -190,6 +250,15 @@
     padding: 1em 2em;
     margin-bottom: 1.4em;
     border-radius: 5px;
+    flex-direction: row;
+
+    @include for_breakpoint(sm-resolution) {
+      flex-direction: column;
+    }
+
+    @include for_breakpoint(xxl-resolution) {
+      flex-direction: column;
+    }
   }
 
   &__box {
@@ -207,6 +276,14 @@
     color: $color-white;
     font-weight: 700;
     line-height: 60px;
+    
+    @include for_breakpoint(sm-resolution) {
+      line-height: 35px;
+    }
+
+    @include for_breakpoint(xxl-resolution) {
+      line-height: 35px;
+    }
   }
 
   &__sub {
@@ -221,10 +298,27 @@
   margin-top: 1em;
   padding: 0em 7em;
 
+  @include for_breakpoint(sm-resolution) {
+      padding: 0em 2em;
+    }
+
+    @include for_breakpoint(xxl-resolution) {
+      padding: 0em 2em;
+    }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1em;
+    flex-direction: row;
+
+    @include for_breakpoint(sm-resolution) {
+      flex-direction: column;
+    }
+
+    @include for_breakpoint(xxl-resolution) {
+      flex-direction: column;
+    }
   }
 
   &__box {
@@ -242,6 +336,16 @@
 
     &:not(:first-child) {
       margin-left: 1em;
+
+      @include for_breakpoint(sm-resolution) {
+        margin-top: 1rem;
+        margin-left: 0em;
+    }
+
+    @include for_breakpoint(xxl-resolution) {
+      margin-top: 1rem;
+      margin-left: 0em;
+    }
     }
   }
 

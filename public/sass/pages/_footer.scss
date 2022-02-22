@@ -1,6 +1,6 @@
 /* Footer */
 .footer {
-  margin-top: 7em;
+  margin-top: 4em;
   padding: 2em 0em;
   width: 100%;
   height: 100%;
@@ -11,11 +11,34 @@
     padding: 2em 7em;
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
+
+    @include for_breakpoint(sm-resolution) {
+      padding: 2em 2em;
+      flex-direction: column;
+    }
+
+    @include for_breakpoint(xxl-resolution) {
+      padding: 2em 2em;
+      flex-direction: column;
+    }
   }
 
   &__box {
     flex-basis: 40%;
     height: 100%;
+
+    &:not(:first-child) {
+      margin-top: 1.2em;
+    }
+
+     @include for_breakpoint(sm-resolution) {
+      flex-basis: 100%;
+    }
+
+    @include for_breakpoint(xxl-resolution) {
+      flex-basis: 100%;
+    }
   }
 
   &__logo {
@@ -24,6 +47,14 @@
     font-weight: 700;
     margin-bottom: 1.2em;
     font-family: $heading-family;
+
+    @include for_breakpoint(sm-resolution) {
+      font-size: 1.4em;
+    }
+
+    @include for_breakpoint(xxl-resolution) {
+      font-size: 1.4em;
+    }
   }
 
   &__info {
@@ -32,6 +63,14 @@
     color: $color-white;
     line-height: 1.5em;
     width: 80%;
+
+      @include for_breakpoint(sm-resolution) {
+      width: 100%;
+    }
+
+    @include for_breakpoint(xxl-resolution) {
+      width: 100%;
+    }
   }
 
   &__main {
@@ -41,6 +80,10 @@
     margin-bottom: 1em;
     font-family: $heading-family;
     text-transform: capitalize;
+
+    @include for_breakpoint(sm-resolution) {
+      font-size: 1.4em;
+    }
   }
 
   &__li {
@@ -97,7 +140,7 @@
 
   &__input {
     width: 100%;
-    padding: 1.6em;
+    padding: 1em;
     background-color: transparent;
     border-top: 1px solid $color-white;
     border-bottom: 1px solid $color-white;
@@ -121,7 +164,7 @@
   }
   &__btn {
     width: 100%;
-    padding: 1.6em;
+    padding: 1em;
     background-color: $primary;
     border: none;
     border-top-right-radius: 4px;

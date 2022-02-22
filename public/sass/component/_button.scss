@@ -45,11 +45,21 @@
   border: none;
   outline: none;
   cursor: pointer;
+
+  @include for_breakpoint(sm-resolution) {
+    width: 100%;
+    font-size: 0.8em;
+  }
+
+  @include for_breakpoint(xxl-resolution) {
+    width: 100%;
+    font-size: 0.8em;
+  }
 }
 
 .bxs-quote-alt-left,
 .bxs-quote-alt-right {
-  font-size: 3rem;
+  font-size: 2rem;
   color: $primary;
 }
 
@@ -63,6 +73,16 @@
   position: absolute;
   bottom: 50%;
   right: -5%;
+
+  @include for_breakpoint(sm-resolution) {
+      right: 0%;
+      bottom: 45%;
+    }
+
+    @include for_breakpoint(xxl-resolution) {
+      right: 0%;
+      bottom: 45%;
+    }
 }
 
 .w-bracket-rg,
